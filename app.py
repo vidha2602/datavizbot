@@ -36,9 +36,6 @@ print("Reading done!")
 
 MAX_ITER = 15
 
-
-
-
 def ask_gpt_3_turbo_model_4k(user_question_content, system_content = "You are a helpfull assistant"):
     response = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",#-16k",
@@ -291,9 +288,6 @@ print(weekly_sales.head(10))
         [{"role": "system","content":initial_promot}],
         )
 
-
-   
-
 @cl.action_callback("total_revenue")
 async def on_top_decliners(action: cl.Action):
     await cl.Message(content = "What is the total revenue generated over the given period?",author="You").send()
@@ -509,9 +503,5 @@ async def handle_user_query(user_message):
             cur_iter += 1
 
     content_ui_message.remove()
-
-
-
-
     print("message_history after question :", message_history)
     #cl.user_session.set("message_history", message_history)
