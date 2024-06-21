@@ -83,20 +83,6 @@ functions = [
     },
 
     {
-    'name':'create_deck',
-    'description': 'Useful when you need to create a deck or a slide or refresh a slide or ppt',
-            "parameters":{
-            "type" : "object",
-            "properties": {
-                "query": {
-                    "type": "string",
-                    "description": "python code to download ppt",
-                },
-            },
-            "required": ["query"]
-        },
-    },
-]
 
 
 def extract_images_names(python_code):
